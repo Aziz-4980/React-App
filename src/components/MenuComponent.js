@@ -23,15 +23,15 @@ function RenderMenuItem({ dish, onClick }) {
 
 const Menu = (props) => {
 
-        const menu = props.dishes.dishes.map((dish) => {
+    const menu = props.dishes.dishes.map((dish) => {
         return (
             <div className="col-12 col-md-5 m-1" key={dish.id}>
                 <RenderMenuItem dish={dish} onClick={props.onClick} />
             </div>
         );
-        });
+    });
 
-        if (props.dishes.isLoading) {
+    if (props.dishes.isLoading) {
         return (
             <div className="container">
                 <div className="row">
@@ -39,8 +39,8 @@ const Menu = (props) => {
                 </div>
             </div>
         );
-        }
-        else if (props.dishes.errMess) {
+    }
+    else if (props.dishes.errMess) {
         return (
             <div className="container">
                 <div className="row">
@@ -50,8 +50,8 @@ const Menu = (props) => {
                 </div>
             </div>
         );
-        }
-     else
+    }
+    else
         return (
 
             <div className="container">
@@ -72,6 +72,6 @@ const Menu = (props) => {
         );
 
 
-        }
+}
 
-        export default Menu;
+export default Menu;
